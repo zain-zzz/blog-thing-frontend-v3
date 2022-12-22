@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,600;1,100;1,300;1,600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+
+header{
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #404258;
+  color: whitesmoke;
+}
+
+main{
+  background-color: #6B728E;
+  min-height: 90vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  display: flex;
+  background-color: whitesmoke;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  align-items: center;
+  height: 80vh;
+  width: 50%;
+  /* border: 1px solid #6B728E; */
+  box-shadow: #404258 5px 5px, #484A5D 10px 10px, #505162 15px 15px, #585967
+  20px 20px, #6B728E 25px 25px;
+  transition: 0.3s;
+}
+
+.inputField{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #454656;
+  position: relative;
+  margin: 4rem auto 1rem;
+}
+
+.inputField::after {
+  content: "";
+  position: relative;
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: plum;
+  transform: scaleX(0);
+  transform-origin: 0%;
+  transition: transform 400ms ease;
+  top: 2px;
+}
+
+
+.inputField:focus-within::after{
+  transform: scaleX(1);
+}
+
+
+h4 {
+  padding-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: blueviolet
+}
+
+input{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.buttons{
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: .2s;
+}
+
+.buttons:hover{
+  background-color: plum;
+}
+
+
+.title{
+  border-bottom: 2px solid plum;
+  width: fit-content;
+}
+
+.feedCont{
+  display: grid;
+  grid: auto / 1fr 2fr 1fr;
+  min-height: 100vh;
+  background-color: #7882A4;
+}
+
+.centerFeed{
+  margin: 10px;
+  border: 3px solid plum;
+  background-color: white;
+  width: 60vw;
+}
+
+.dashboardCenterFeed{
+  margin: 10px;
+  border: 3px solid plum;
+  background-color: white;
+  width: 60vw;
+  display: grid;
+  grid: 1fr/1fr;
+  place-content: center;
+}
+
+.rightFeed{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  margin: 10px;
+}
+
+.rightFeed button{
+  margin-top: 20px;
+  font-size: 1.3rem;
+  width: 70%;
+  height: 60px;
+  border-radius: 10px;
+  background-color: plum;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.rightFeed button:hover{
+  background-color: #BF82BF;
+}
+
+.content{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 300;
+}
+
+
+.leftFeed{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  margin: 10px;
+}
+
+.leftFeed button{
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.leftFeed button:hover{
+  text-decoration: underline;
+}
+
+.leftFeed a{
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+
+.leftFeed a:hover{
+  text-decoration: underline;
+}
+
+.profileDisplay {
+  display: grid;
+  grid: 1fr/1fr;
+  padding: 10px;
+  place-items: center;
+}
+
+.profileDisplay img {
+  /* background-color: blue; */
+  /* display: left; */
+  border-radius: 100%;
+  width: 128px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+
+.profileInfo{
+  text-align: center;
+}
+
+.profileInfo h2 {
+  font-weight: 600;
+}
+.profileInfo h4 {
+  font-weight: 300;
+}
+
+.titleSmall{
+  text-align: center;
+}
+
+.posts{
+  min-height: 70vh;
+  overflow: auto;
+  /* white-space: nowrap; */
+}
+
+.myPostsCont {
+  /* overflow: auto;
+  overflow-wrap: break-word; */
+  display: inline-block;
+  width: 100%;
+  border: 1px solid plum;
+  height: 1fr;
+  box-sizing: border-box;
+}
+
+
+.verticalPost{
+  background-color: whitesmoke;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: .5rem;
+}
+
+.postContainer{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 16px;
+  padding: 1.6rem;
+  background-color: white;
+  /* border: 1px solid palegoldenrod; */
+  margin: 10px;
+  box-shadow: 0 -1.5rem 2rem rgba(0, 0, 0, 0.45);
+  transition: .3s;
+}
+
+.postContainer:hover{
+  transform: translateY(-.7rem);
+}
+
+.feedContainer{
+  display: grid;
+  grid: auto / 20vw 60vw 20vw;
+  max-height: 100vh;
+  background-color: #7882A4;
+}
+
+
+.feedContainer .left{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  margin: 10px;
+}
+
+.left button{
+  background-color: transparent;
+  color: whitesmoke;
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.left a:hover, button:hover{
+  text-decoration: underline;
+}
+
+.left a{
+  margin-top: 10px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+
+
+
+.feedContainer .right{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+  margin: 10px;
+}
+
+.right button{
+  margin-top: 20px;
+  font-size: 1.3rem;
+  width: 70%;
+  height: 60px;
+  border-radius: 10px;
+  background-color: plum;
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.right button:hover{
+  background-color: #BF82BF;
+}
+
+#signoutbtn{
+  margin: 0;
+}
+/* .myPosts{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* .bigCont{
+  display: flex;
+  flex-direction: row;
+} */
+
+/* .individualCard{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: 300px;
+  width: 100%;
+  background-color: red;
+  min-width: 100px;
+} */
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+  main{
+    background-color: #6B728E;
+    min-height: 90vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card{
+    display: flex;
+    /* turn back to smokewhite when done */
+    background-color: whitesmoke;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    align-items: center;
+    height: 60vh;
+    width: 80%;
+    border: 1px solid #6B728E;
+    box-shadow: #404258 5px 5px, #484A5D 10px 10px, #505162 15px 15px, #585967
+    20px 20px, #6B728E 25px 25px;
+    transition: 0.3s;
+  }
+
+  .inputField{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid #454656;
+    position: relative;
+    margin: 0rem auto 1rem;
+  }
+
+  .feedCont{
+    display: grid;
+    grid: auto / 100vw;
+    min-height: 100vh;
+    background-color: #7882A4;
+  }
+  
+  .centerFeed{
+    margin: 0px;
+    border: 3px solid plum;
+    background-color: white;
+  }
+  
+  .postCard{
+    border-bottom: 2px solid #404258;
+    display:grid;
+    grid: auto / 1fr;
+    align-items: center;
+    /* flex-direction: column; */
+    width: 85vw;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .title{
+    border-bottom: 2px solid plum;
+    border-left: 10px;
+    width: fit-content;
+  }
+
+  .leftFeed{
+    padding: 3vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: whitesmoke;
+    margin: 10px;
+  }
+  
+  .leftFeed *{
+    padding-left: 2.4vw;
+    padding-right: 2.4vw;
+  }
+
+}
