@@ -22,3 +22,121 @@
 .popupText input{
   background-color: whitesmoke;
 }
+
+.profilePopupCont{
+  background-color: rgba(0, 0, 0, 0.7);
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.fileUploadContainer{
+  /* background-color: royalblue; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width:90%;
+  margin-bottom: -5%;
+}
+
+
+
+.popupBox{
+  display: flex;
+  background-color: whitesmoke;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  align-items: center;
+  height: 45vh;
+  width: 30vw;
+  /* border: 1px solid #6B728E; */
+  /* box-shadow: #404258 5px 5px, #484A5D 10px 10px, #505162 15px 15px, #585967
+  20px 20px, #6B728E 25px 25px;
+  transition: 0.3s; */
+}
+
+form {
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form div {
+  display: flex;
+  translate: 36%;
+  color: transparent;
+  display: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+p {
+  color: black;
+}
+
+textarea {
+  font-size: larger;
+}
+
+.popupBox button {
+  width: 45px;
+  height: 45px;
+  border-radius: 500%;
+  background-color: var(--mDark);
+  translate:540% -800%;
+}
+
+.popupBox button:hover{
+  background-color: red;
+  text-decoration: none;
+}
+
+.submit-button {
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: .2s;
+  background-color: var(--mDark);
+}
+
+.popupText h1{
+  color: black;
+  font-size: x-large;
+}
+
+/* .popupBox{
+  background-color: antiquewhite;
+  height: 30%;
+  width: 30%;
+  border-radius: 10%;
+} */
+
+.submit-button:hover{
+  background-color: var(--accent);
+}
+
+.previewImage {
+  width: 128px;
+  border-radius: 100%;
+}
+
+.buttonsDiv {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 30vw;
+  justify-content: space-evenly;
+}
+
+.buttonsDiv button {
+  width: 10vw
+}
