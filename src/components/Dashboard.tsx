@@ -61,14 +61,15 @@ export default function Dashboard({ setIsAuth, isAuth }:any) {
 
   return (
     <>
-      <section className="feedCont">
-        <div className="leftFeed">
+      <section className='feedContainer'>
+        <div className="left">
           <NavLink to={"/"}>Feed</NavLink>
           <h2>Dashboard</h2>
-          <button onClick={logOut}>Sign out</button>
+          <button onClick={logOut}>Logout</button>
         </div>
 
         <div className="dashboardCenterFeed">
+          
           <div className="profileDisplay">
             <div className="profilePicture">
               <img src={profilePicture}   
@@ -85,27 +86,28 @@ export default function Dashboard({ setIsAuth, isAuth }:any) {
             </div>
           </div>
 
-          <h1 className="titleSmall">My Posts</h1>
+          <div className="titleBig">
+            <h1>My Posts</h1>
+          </div>
 
-          {
-            <div className="posts">
-              {posts.map((current: any) => {
-                return (
-                  <div className="myPostsCont">
-                    <div key={current.id} className="myPosts">
-                      <h1>{username}</h1>
-                      <h3>{current.content}</h3>
-                    </div>
+          <div className="verticalPost">
+            {posts.map((current:any) => {
+              return(
+                <div className="postContainer">
+                  <div className="titleContainer">
+                    {/* <h1>{username}</h1> */}
                   </div>
-                );
-              })}
-            </div>
-          }
+                  <h3>{current.content}</h3>
+                </div>
+              )
+            })}
+          </div>
         </div>
 
-        <div className="rightFeed">
+        <div className="right">
           {popupOpen && <ProfilePopup setPopupOpen={setPopupOpen}/>}
           <button onClick={() => setPopupOpen(true)}>Change Profile</button>
+
         </div>
 
         

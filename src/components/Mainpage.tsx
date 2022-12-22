@@ -77,7 +77,22 @@ export default function Mainpage({setIsAuth, isAuth}: any) {
           {posts.map((current:any) => {
             return(
               <div className="postContainer">
-                <h1>{current.username}</h1>
+                <div className="titleContainer">
+
+                  <div className='profilePicture'>
+                    <img src={`http://localhost:3003/images/${current.username}-PFP.png`}   
+                      onError={({ currentTarget }) => {
+                        currentTarget.onerror = null; // prevents looping
+                        currentTarget.src="https://st3.depositphotos.com/6672868/13701/v/600/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
+                      }}
+                    />
+                  </div>
+
+                  <div className='profileInfo'>
+                    <h1>{current.username}</h1>
+                    <h4>{current.email}</h4>
+                  </div>
+                </div>
                 <h3>{current.content}</h3>
               </div>
             )
@@ -87,9 +102,9 @@ export default function Mainpage({setIsAuth, isAuth}: any) {
 
 
       <section className='right'>
-      <h1>{username} is logged in!</h1>
-      {popupOpen && <PostPopup name={name} setPopupOpen={setPopupOpen}/>}
-      <button onClick={() => setPopupOpen(true)}>Post</button>
+        <h1>{username} is logged in!</h1>
+          {popupOpen && <PostPopup name={name} setPopupOpen={setPopupOpen}/>} 
+        <button onClick={() => setPopupOpen(true)}>Post</button>
       </section>
 
 
